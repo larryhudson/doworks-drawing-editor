@@ -1,0 +1,41 @@
+---
+import DrawingEditor from "../components/DrawingEditor.tsx";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Drawing editor</title>
+	</head>
+	<body>
+		<h1>doworks drawing exhibition</h1>
+		<ol>
+			<li>draw something below</li>
+			<li>click download in the top right corner</li>
+			<li>email us the drawing</li>
+			<li>we might use it in our exhibition</li>
+		</ol>
+
+		<div class="drawing-editor-container">
+		<DrawingEditor client:only="react" />
+		</div>
+
+	</body>
+</html>
+
+<style>
+body {
+		max-width: 60rem;
+	margin: auto;
+}
+
+	.drawing-editor-container {
+		width: 100%;
+		max-height: 100dvh;
+		height: 600px;
+		margin: 0 auto;
+}
+</style>
